@@ -70,9 +70,8 @@
 -- TODO! DROP TABLE 
 
 DROP TABLE IF EXISTS movies; 
-DROP TABLE IF EXISTS rating; 
-DROP TABLE IF EXISTS people; 
-DROP TABLE IF EXISTS role; 
+DROP TABLE IF EXISTS cast; 
+DROP TABLE IF EXISTS directors; 
 
 -- Create new tables, according to your domain model
 -- TODO!
@@ -81,32 +80,56 @@ CREATE TABLE movies (
 id INTEGER PRIMARY KEY AUTOINCREMENT, 
 title TEXT, 
 year_released INTEGER,
-rating_id INTEGER, 
-people_id INTEGER,
-role_id INTEGER 
+mpaa_rating TEXT
 ); 
  
-CREATE TABLE rating ( 
-id INTEGER PRIMARY KEY AUTOINCREMENT, 
-label TEXT 
-); 
- 
-CREATE TABLE people ( 
+CREATE TABLE cast ( 
 id INTEGER PRIMARY KEY AUTOINCREMENT, 
 first_name TEXT,
-last_name TEXT
+last_name TEXT,
+movies_id INTEGER
 ); 
  
-CREATE TABLE role ( 
+CREATE TABLE directors ( 
 id INTEGER PRIMARY KEY AUTOINCREMENT, 
-name TEXT 
+first_name TEXT,
+last_name TEXT,
+movies_id INTEGER
 ); 
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
+INSERT INTO movies (
+    title, 
+    year_released,
+    mpaa_rating
+) VALUES (
+    "Batman Begins",
+    2005,
+    "PG-13"
+);
 
+INSERT INTO movies (
+    title, 
+    year_released,
+    mpaa_rating
+) VALUES (
+    "The Dark Knight",
+    2008,
+    "PG-13"
+);
+
+INSERT INTO movies (
+    title, 
+    year_released,
+    mpaa_rating
+) VALUES (
+    "The Dark Knight Rises",
+    2012,
+    "PG-13"
+);
 
 -- Prints a header for the movies output
 .print "Movies"
