@@ -353,5 +353,5 @@ FROM Movies INNER JOIN Directors ON Movies.id = Directors.movies_id;
 -- The SQL statement for the Top_Cast output
 -- TODO!
  
-SELECT Movies.title, Top_Cast.first_name, Top_Cast.last_name, Top_Cast.character
+SELECT Movies.title, (Top_Cast.first_name||" "||Top_Cast.last_name) as actor, Top_Cast.character
 FROM Movies INNER JOIN Top_Cast ON Movies.id = Top_Cast.movies_id;
