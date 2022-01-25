@@ -302,7 +302,7 @@ INSERT INTO Directors (
 -- The SQL statement for the movies output
 -- TODO!
 
-.width 20 4 5 20
+.width 21 4 5 20
  
 SELECT Movies.title, Movies.year_released, Movies.mpaa_rating, Directors.name
 FROM Movies INNER JOIN Directors ON Movies.id = Directors.movies_id;
