@@ -255,8 +255,7 @@ INSERT INTO Top_Cast (
  character,
  movies_id
 ) VALUES (
- "Joseph",
- "Gordon-Levitt",
+ "Joseph Gordon-Levitt",
  "John Blake",
  3
 );
@@ -302,6 +301,8 @@ INSERT INTO Directors (
  
 -- The SQL statement for the movies output
 -- TODO!
+
+.width 20 4 5 20
  
 SELECT Movies.title, Movies.year_released, Movies.mpaa_rating, Directors.name
 FROM Movies INNER JOIN Directors ON Movies.id = Directors.movies_id;
@@ -315,5 +316,7 @@ FROM Movies INNER JOIN Directors ON Movies.id = Directors.movies_id;
 -- The SQL statement for the Top_Cast output
 -- TODO!
  
+.width 21 20 20
+
 SELECT Movies.title, Top_Cast.name, Top_Cast.character
 FROM Movies INNER JOIN Top_Cast ON Movies.id = Top_Cast.movies_id;
