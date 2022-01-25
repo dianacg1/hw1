@@ -311,6 +311,36 @@ INSERT INTO Cast (
    "Selina Kyle",
    3
 );
+
+INSERT INTO Directors (
+    first_name TEXT,
+    last_name TEXT,
+    movies_id INTEGER
+) VALUES (
+   "Christopher",
+   "Nolan",
+   1
+);
+
+INSERT INTO Directors (
+    first_name TEXT,
+    last_name TEXT,
+    movies_id INTEGER
+) VALUES (
+   "Christopher",
+   "Nolan",
+   2
+);
+
+INSERT INTO Directors (
+    first_name TEXT,
+    last_name TEXT,
+    movies_id INTEGER
+) VALUES (
+   "Christopher",
+   "Nolan",
+   3
+);
  
 -- Prints a header for the movies output
 .print "Movies"
