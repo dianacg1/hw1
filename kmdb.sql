@@ -63,8 +63,8 @@
 -- The Dark Knight Rises  Anne Hathaway         Selina Kyle
  
 -- Turns column mode on but headers off
--- .mode column
--- .headers off
+.mode column
+.headers off
  
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO! DROP TABLE
@@ -313,9 +313,9 @@ INSERT INTO Cast (
 );
 
 INSERT INTO Directors (
-    first_name TEXT,
-    last_name TEXT,
-    movies_id INTEGER
+    first_name,
+    last_name,
+    movies_id
 ) VALUES (
    "Christopher",
    "Nolan",
@@ -323,9 +323,9 @@ INSERT INTO Directors (
 );
 
 INSERT INTO Directors (
-    first_name TEXT,
-    last_name TEXT,
-    movies_id INTEGER
+    first_name,
+    last_name,
+    movies_id
 ) VALUES (
    "Christopher",
    "Nolan",
@@ -333,9 +333,9 @@ INSERT INTO Directors (
 );
 
 INSERT INTO Directors (
-    first_name TEXT,
-    last_name TEXT,
-    movies_id INTEGER
+    first_name,
+    last_name,
+    movies_id
 ) VALUES (
    "Christopher",
    "Nolan",
@@ -350,6 +350,8 @@ INSERT INTO Directors (
 -- The SQL statement for the movies output
 -- TODO!
 
+SELECT Movies.title, Movies.year_released, Movies.mpaa_rating, Directors.first_name, Directors.last_name
+FROM Movies INNER JOIN Directors ON Movies.id = Directors.movies_id;
 
  
 -- Prints a header for the cast output
